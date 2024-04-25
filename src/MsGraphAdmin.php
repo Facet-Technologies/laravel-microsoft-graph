@@ -162,7 +162,7 @@ class MsGraphAdmin
         }
     }
 
-    protected function isJson(object $data): bool
+    protected function isJson($data): bool
     {
         return is_string($data) && is_array(json_decode($data, true)) && (json_last_error() == JSON_ERROR_NONE);
     }
@@ -170,7 +170,7 @@ class MsGraphAdmin
     /**
      * @throws Exception
      */
-    protected function guzzle(string $type, string $request, array $data = []): mixed
+    protected function guzzle($type, $request, $data = []): mixed
     {
         try {
             $client = new Client;
