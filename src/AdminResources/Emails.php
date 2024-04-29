@@ -193,7 +193,7 @@ class Emails extends MsGraphAdmin
     /**
      * @throws Exception
      */
-    public function send(): MsGraphAdmin
+    public function send()
     {
         if (strlen($this->userId) === 0) {
             throw new Exception('userId is required.');
@@ -217,7 +217,7 @@ class Emails extends MsGraphAdmin
     /**
      * @throws Exception
      */
-    public function reply(): MsGraphAdmin
+    public function reply()
     {
         if (strlen($this->userId) === 0) {
             throw new Exception('userId is required.');
